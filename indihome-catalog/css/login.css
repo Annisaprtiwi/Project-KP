@@ -1,0 +1,123 @@
+/* login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../images/login.png');
+    background-size: cover;
+    /* Gambar latar menutupi seluruh layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Latar belakang putih dengan transparansi */
+    padding: 20px;
+    /* Jarak dalam elemen kontainer */
+    border-radius: 8px;
+    /* Sudut melengkung */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan halus */
+    max-width: 400px;
+    /* Lebar maksimal kontainer */
+    width: 100%;
+    /* Lebar kontainer 100% dari elemen induk */
+}
+
+.login-container h2 {
+    text-align: center;
+    /* Teks di tengah */
+    margin-bottom: 20px;
+    /* Jarak bawah */
+    color: #8f0808;
+    /* Warna teks merah */
+}
+
+.login-container label {
+    display: block;
+    /* Label dalam blok */
+    margin-bottom: 8px;
+    /* Jarak bawah label */
+    font-weight: bold;
+    /* Tebal huruf */
+    color: #555;
+    /* Warna teks abu-abu */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    /* Lebar input 100% */
+    padding: 10px;
+    /* Jarak dalam input */
+    margin-bottom: 20px;
+    /* Jarak bawah input */
+    border: 1px solid #222121;
+    /* Border merah */
+    border-radius: 4px;
+    /* Sudut border melengkung */
+    box-sizing: border-box;
+    /* Memastikan padding termasuk dalam ukuran elemen */
+}
+
+.login-container button {
+    width: 100%;
+    /* Lebar tombol 100% */
+    padding: 10px;
+    /* Jarak dalam tombol */
+    background-color: #8f0808;
+    /* Warna latar belakang merah */
+    color: #fff;
+    /* Warna teks putih */
+    border: none;
+    /* Hilangkan border */
+    border-radius: 4px;
+    /* Sudut border melengkung */
+    cursor: pointer;
+    /* Ubah kursor menjadi pointer saat hover */
+    font-size: 16px;
+    /* Ukuran font */
+    transition: background-color 0.3s;
+    /* Tambahkan transisi untuk efek hover */
+}
+
+.login-container button:hover {
+    background-color: #d81111;
+    /* Warna latar belakang berubah saat hover */
+}
+
+.login-container .error {
+    color: red;
+    /* Warna teks merah untuk pesan kesalahan */
+    text-align: center;
+    /* Teks di tengah */
+    margin-top: -10px;
+    /* Margin atas negatif untuk mendekatkan ke elemen sebelumnya */
+    margin-bottom: 10px;
+    /* Margin bawah */
+}
+
+.login-container .links {
+    text-align: center;
+    /* Teks di tengah */
+    margin-top: 10px;
+    /* Jarak atas */
+}
+
+.login-container .links a {
+    color: #007bff;
+    /* Warna teks biru untuk tautan */
+    text-decoration: none;
+    /* Hilangkan garis bawah */
+    font-size: 14px;
+    /* Ukuran font */
+}
+
+.login-container .links a:hover {
+    text-decoration: underline;
+    /* Tambahkan garis bawah saat hover */
+}

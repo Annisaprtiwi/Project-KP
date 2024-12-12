@@ -1,0 +1,371 @@
+/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #8f0808;
+    /* Warna merah Telkomsel */
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+
+/* Hamburger styling */
+
+.hamburger {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    display: none;
+    /* Akan diaktifkan untuk layar yang lebih kecil */
+}
+
+.sidebar {
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+    transform: translateX(-250px);
+}
+
+
+/* Menampilkan hamburger pada layar kecil */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        padding: 15px;
+        margin-bottom: 10px;
+        background-color: #333;
+        /* Warna latar belakang untuk kontras */
+        text-align: center;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1000;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .sidebar.hidden {
+        transform: translateX(-250px);
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-logo {
+    width: 50px;
+    /* Atur ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-right: 10px;
+}
+
+.sidebar h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #d81111;
+    /* Warna merah lebih terang */
+}
+
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 3px solid #8f0808;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #8f0808;
+    font-weight: 600;
+}
+
+.form-section,
+.table-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 20px;
+    color: #8f0808;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    /* Membuat input memenuhi lebar form */
+    padding: 12px;
+    /* Padding untuk membuat ruang di dalam input */
+    margin-bottom: 15px;
+    /* Jarak bawah untuk pemisahan antara input */
+    border: 1px solid #8f0808;
+    /* Border input */
+    border-radius: 5px;
+    /* Jari-jari border untuk input */
+    box-sizing: border-box;
+    /* Memastikan padding dan border dihitung dalam lebar total */
+    font-size: 14px;
+    /* Ukuran font input */
+}
+
+form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #8f0808;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #d81111;
+}
+
+form button[type="button"] {
+    padding: 10px 15px;
+    background-color: #292a2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+form button[type="button"]:hover {
+    background-color: #4f5052;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #8f0808;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+/* CSS untuk foto SF */
+
+.sf-table img.sf-photo {
+    width: 50px;
+    /* Atur lebar gambar sesuai kebutuhan */
+    height: 50px;
+    /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover;
+    /* Memastikan gambar tidak terdistorsi */
+    border-radius: 5px;
+    /* Untuk memberikan sudut membulat pada gambar */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit {
+    padding: 10px 15px;
+    background-color: #292a2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.edit:hover {
+    background-color: #4f5052;
+}
+
+
+/* Button for Adding Admin in Header */
+
+.add-admin-btn {
+    padding: 10px 15px;
+    background-color: #a50015;
+    /* Warna gelap untuk tombol */
+    color: #ffffff;
+    /* Warna teks putih */
+    border: none;
+    /* Menghapus border default */
+    border-radius: 5px;
+    /* Sudut membulat untuk tombol */
+    cursor: pointer;
+    /* Pointer saat hover */
+    font-weight: 600;
+    /* Berat font untuk teks */
+    font-size: 14px;
+    /* Ukuran font tombol */
+    text-align: center;
+    /* Teks di tengah tombol */
+    display: inline-block;
+    /* Menjadikan tombol inline-block */
+    transition: background-color 0.3s ease;
+    /* Efek transisi pada background-color */
+}
+
+.add-admin-btn:hover {
+    background-color: #d6001c;
+    /* Warna tombol saat hover */
+}
+
+
+/* Overlay Styles */
+
+.overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    /* Agar overlay tidak terlalu besar di layar kecil */
+    position: relative;
+}
+
+.close,
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #8f0808;
+    /* Warna tombol close */
+}
+
+.close:hover,
+.close-btn:hover {
+    color: #d6001c;
+    /* Warna tombol close saat hover */
+}
+
+.overlay-content button[type="submit"] {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #8f0808;
+    /* Warna tombol */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    /* Jarak atas untuk pemisahan tombol */
+}
+
+.overlay-content button[type="submit"]:hover {
+    background-color: #d6001c;
+    /* Warna tombol saat hover */
+}
+
+#edit-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
